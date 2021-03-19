@@ -1,5 +1,9 @@
 # Aplicação: RoutesFinder
 
+#### Pré-requisitos: ####
+
+.NET Core 2.2
+https://dotnet.microsoft.com/download/dotnet/2.2
 
 # Rota de Viagem #
 
