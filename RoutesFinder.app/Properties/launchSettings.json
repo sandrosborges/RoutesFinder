@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RoutesFinder.app": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\cursos\\RoutesFinder\\input-route.csv"
+    }
+  }
+}
