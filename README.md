@@ -2,8 +2,7 @@
 
 #### Pré-requisitos: ####
 
-.NET Core 2.2
-https://dotnet.microsoft.com/download/dotnet/2.2
+##### .NET Core 2.2 (https://dotnet.microsoft.com/download/dotnet/2.2)
 
 # Rota de Viagem #
 
@@ -26,7 +25,14 @@ SCL,ORL,20
 Execução do programa
 A inicializacao do teste se dará por linha de comando onde o primeiro argumento é o arquivo com a lista de rotas inicial.
 
+**Exemplo**:
 RoutesFinder.app.exe input-routes.csv
+
+## Execução do projeto APP (console): ##
+
+$  cd .\RoutesFinder\RoutesFinder.app\
+$  dotnet  run ..\input-route.csv
+
 
 Tela exibida: 
 
@@ -56,10 +62,17 @@ POST
 
 ## Swagger: ##
 
-https://localhost:5001/swagger/index.html
+**url**:  https://localhost:5001/swagger/index.html
+
+**yaml**: https://github.com/sandrosborges/RoutesFinder/blob/master/RoutesFinder.api/RoutesFinder_swagger.yaml
 
 ![image](https://user-images.githubusercontent.com/38473707/111728686-27b50980-884c-11eb-81e5-bcf673f1ec31.png)
 
+
+## Execução do projeto API: ##
+
+$  cd .\RoutesFinder\RoutesFinder.api\
+$  dotnet run
 
 ## Solução para busca da melhor rota: ##
 
