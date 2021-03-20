@@ -1,0 +1,79 @@
+openapi: 3.0.1
+info:
+  title: RoutesFinder
+  version: v1
+paths:
+  /api/RouteFinder/routes:
+    get:
+      tags:
+        - RouteFinder
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Route'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Route'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Route'
+    post:
+      tags:
+        - RouteFinder
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/Route'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Route'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Route'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Route'
+      responses:
+        '200':
+          description: Success
+  /api/RouteFinder/routes/best:
+    get:
+      tags:
+        - RouteFinder
+      parameters:
+        - name: origin
+          in: query
+          schema:
+            type: string
+        - name: destination
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    Route:
+      type: object
+      properties:
+        origin:
+          type: string
+          nullable: true
+        destination:
+          type: string
+          nullable: true
+        cost:
+          type: number
+          format: double
+      additionalProperties: false
